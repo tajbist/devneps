@@ -1,19 +1,13 @@
-name: devneps
+name: ci
 
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        module:
-          - account-module
-          - transfer-module
-          - api-gateway
     steps:
       -
         name: Checkout
